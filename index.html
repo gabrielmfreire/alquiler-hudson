@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 
-<html class="light" lang="es"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Alquiler Monoambiente Hudson</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
+<html class="light" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Alquiler Monoambiente Hudson</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
@@ -22,195 +29,384 @@
                     fontFamily: {
                         "display": ["Plus Jakarta Sans", "sans-serif"]
                     },
-                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
                 },
             },
         }
     </script>
-<style>
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-        .sticky-card { position: sticky; top: 2rem; }
+    <style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .sticky-card {
+            position: sticky;
+            top: 2rem;
+        }
     </style>
 </head>
+
 <body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
-<!-- Top Navigation Bar -->
-<header class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex items-center justify-between h-16">
-<div class="flex items-center gap-2">
-<div class="text-primary">
-<svg class="size-8" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z" fill="currentColor"></path>
-</svg>
-</div>
-<h1 class="text-xl font-bold tracking-tight">Hudson Alquileres</h1>
-</div>
-<nav class="hidden md:flex items-center gap-8">
-<a class="text-sm font-medium hover:text-primary transition-colors" href="#fotos">Fotos</a>
-<a class="text-sm font-medium hover:text-primary transition-colors" href="#caracteristicas">Características</a>
-<a class="text-sm font-medium hover:text-primary transition-colors" href="#ubicacion">Ubicación</a>
-<button class="bg-primary text-white px-5 py-2 rounded-lg text-sm font-bold hover:bg-primary/90 transition-all">
+    <!-- Top Navigation Bar -->
+    <header
+        class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center gap-2">
+                    <div class="text-primary">
+                        <svg class="size-8" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z"
+                                fill="currentColor"></path>
+                        </svg>
+                    </div>
+                    <h1 class="text-xl font-bold tracking-tight">Monoambiente - Hudson | Alquiler</h1>
+                </div>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="#fotos">Fotos</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors"
+                        href="#caracteristicas">Características</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="#ubicacion">Ubicación</a>
+                    <a href="https://wa.me/5491131677098?text=Hola!%20Vi%20el%20anuncio%20en%20la%20web%20y%20me%20gustar%C3%ADa%20coordinar%20una%20visita%20para%20ver%20el%20inmueble.%20%C2%BFCu%C3%A1ndo%20podr%C3%ADa%20ser?"
+                        target="_blank"
+                        class="bg-primary text-white px-5 py-2 rounded-lg text-sm font-bold hover:bg-primary/90 transition-all">
                         Reservar Visita
-                    </button>
-</nav>
-</div>
-</div>
-</header>
-<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-<div class="flex flex-col lg:flex-row gap-8">
-<!-- Left Column: Content & Gallery -->
-<div class="flex-1 space-y-8">
-<!-- Hero Section -->
-<section class="relative group overflow-hidden rounded-xl bg-slate-200 dark:bg-slate-800" id="fotos">
-<div class="aspect-[16/9] w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Modern studio apartment interior with white walls and natural light" style='background-image: linear-gradient(rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.5) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAEWvqxqjkcXHO-uYxzPoB657yGnGMyNC3el_oRA5UYkoxmhf8XNTonlvV-BQajT2mG4TnQj5nDkf8QFcEqMBYtLPuZwl6xEGYAaDlvvCGQuYwUElkkg9PmhjaS5JwuBfX_iqxUX3dG7sJF1XgvW_yJhc2enc3Z7VKjzS4UN_W_-LuRKSV8vSSHsiyEOrDanC-dte1VCvyqSRu8sKY-G39_Q-2lzOr0FcHql_D3y57NhxsovybyQvKBTYJQwRP2lBjp5QDCkdWenwM");'>
-<div class="absolute bottom-6 left-6 text-white">
-<h2 class="text-3xl font-extrabold">Monoambiente Moderno en Hudson</h2>
-<p class="text-white/90 font-medium">Luminoso y listo para mudarte</p>
-</div>
-</div>
-</section>
-<!-- Photo Carousel -->
-<div class="overflow-x-auto no-scrollbar">
-<div class="flex gap-4 pb-2">
-<div class="flex-none w-48 h-32 rounded-lg overflow-hidden bg-slate-200 cursor-pointer border-2 border-primary">
-<div class="w-full h-full bg-cover bg-center" data-alt="Main living area view" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCzNQKCSPlanP5QarjqhVf8Og64ai9FleOivFr2yLzmZmZ0aKGJDdM0JInXIGOTw9_V9JzUHQK2MpyjQQ2Bt4qlFrwZrhZbA745m4z_roPNxZHN2A9c51sap2Iv3K2kZ3ADv11D6-khY8TY7iGk0zpU1euggWMcCgjxWuUIj6uC2V74WcgoV32gu9xAJPEA6JYYSdWMo2RAISEmVuP0-ZYkKlDvvgR2F6_f7pLK6hR0svWlBvj885kEeqmbPvjtbKN5MmyJ3tcgStI");'></div>
-</div>
-<div class="flex-none w-48 h-32 rounded-lg overflow-hidden bg-slate-200 cursor-pointer">
-<div class="w-full h-full bg-cover bg-center" data-alt="Full bathroom with modern tiles" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB0Xa-xWgyPpjocnkDGCfy4bSdQdX-m_vQX56HFXM54lapOiTWkYM-Wok3u38jmL_DYzLlIibUqNy5oXDXsxBEQ7sUUCqbmiFwlx4Q4B3QpAiSCt8aXPdC86yIim9-caX_7NXNwJhPbR6loz7Fnbf12eiG_i6uoTUHKnJhqqmXQPdoFA9AYmqZPQf4vv0e8igYkiZSlMUr-q3rdeelWTKoX40zC8Yfkg6Cmw81EA3naHUweh9Yw4gCvSYufTrvuZBcIlvoS6eWskP4");'></div>
-</div>
-<div class="flex-none w-48 h-32 rounded-lg overflow-hidden bg-slate-200 cursor-pointer">
-<div class="w-full h-full bg-cover bg-center" data-alt="Electric water heater and laundry area" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCOpqrvGyeoHFsbaxH32rS7a8c547jYFlukoLJDkRAQcCty7gVx9WvxTLpxy8lEdiv1kOGKJpy_Nl4C38c7qTFKkYiuoJYThgRTS-6A-c6d3kVJyjuMIxpcLzfxboa2dAvZUE2TYkJDoYpE44VP2r41-qMDwNaQbKpUMhKC8nSTUwZWAnSX4qMVjQZMZj3tswUK7BuDpPLMO5OE12RAWM1fuDz7EXXJDZBcgTNVUP37Z9x3pKUIqExk95FZ02oiXJC4KODxLWUyyYA");'></div>
-</div>
-<div class="flex-none w-48 h-32 rounded-lg overflow-hidden bg-slate-200 cursor-pointer">
-<div class="w-full h-full bg-cover bg-center" data-alt="Shared garden and patio space" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBHbUtuWs_BzdDQvxaO9nHUibUTYunsm7C102zlDUieEDYJsqubwQhj73CyFnb2vPnihpYpmoKBWBMoSoWOfhtisyDRjuAfFScpCgG-0lyLvqAKHIntpCOPoviOpDtwsBtwCmxA3Sx6Xmsy33dth8abhzyuYNQdvTBRc_BIqyE4VKdk85qmXitmz_tpjGjTHTy7CvC32SMMKWkbGn1NQjdUJ0tKde7MRshNK4mKwRoIajqJ5KMFbafkW2sQUmPTS5CUVXk05UOPPZ0");'></div>
-</div>
-</div>
-</div>
-<!-- Features Section -->
-<section class="space-y-6" id="caracteristicas">
-<h3 class="text-2xl font-bold text-slate-900 dark:text-white border-b border-slate-200 dark:border-slate-800 pb-4">Detalles de la Propiedad</h3>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-<div class="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-slate-900 shadow-sm border border-slate-100 dark:border-slate-800">
-<span class="material-symbols-outlined text-primary text-3xl">straighten</span>
-<div>
-<p class="text-sm text-slate-500 dark:text-slate-400">Dimensiones</p>
-<p class="font-bold">7mts x 4mts (28m²)</p>
-</div>
-</div>
-<div class="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-slate-900 shadow-sm border border-slate-100 dark:border-slate-800">
-<span class="material-symbols-outlined text-primary text-3xl">bathroom</span>
-<div>
-<p class="text-sm text-slate-500 dark:text-slate-400">Baño</p>
-<p class="font-bold">Baño Completo</p>
-</div>
-</div>
-<div class="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-slate-900 shadow-sm border border-slate-100 dark:border-slate-800">
-<span class="material-symbols-outlined text-primary text-3xl">bolt</span>
-<div>
-<p class="text-sm text-slate-500 dark:text-slate-400">Servicios</p>
-<p class="font-bold">Luz compartida</p>
-</div>
-</div>
-<div class="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-slate-900 shadow-sm border border-slate-100 dark:border-slate-800">
-<span class="material-symbols-outlined text-primary text-3xl">water_heater</span>
-<div>
-<p class="text-sm text-slate-500 dark:text-slate-400">Agua Caliente</p>
-<p class="font-bold">Termotanque eléctrico</p>
-</div>
-</div>
-<div class="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-slate-900 shadow-sm border border-slate-100 dark:border-slate-800">
-<span class="material-symbols-outlined text-primary text-3xl">local_laundry_service</span>
-<div>
-<p class="text-sm text-slate-500 dark:text-slate-400">Lavadero</p>
-<p class="font-bold">Conexión para lavarropas</p>
-</div>
-</div>
-<div class="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-slate-900 shadow-sm border border-slate-100 dark:border-slate-800">
-<span class="material-symbols-outlined text-primary text-3xl">deck</span>
-<div>
-<p class="text-sm text-slate-500 dark:text-slate-400">Exteriores</p>
-<p class="font-bold">Patio compartido</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Location Section -->
-<section class="space-y-4" id="ubicacion">
-<h3 class="text-2xl font-bold text-slate-900 dark:text-white">Ubicación</h3>
-<div class="w-full h-64 rounded-xl bg-slate-200 dark:bg-slate-800 overflow-hidden relative">
-<div class="absolute inset-0 bg-cover bg-center" data-alt="Map showing the location in Hudson area" data-location="Hudson, Argentina" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDvJEdTkPbUHEG7PDLwdgK99uNPH3z8nK0v1PZgNfz1CZuBU3GNvSfR199n5Zt01TpYPehgWJ_RtK6OnVBJyOs6JYuJCt_hsB26zSK_DaS2Vh4v7etW94pcLis6A-SQzAKVFHXQncPasG5dmQ-Sd0vKSPzy-_3Aaq1cjQIFyhyCcZoYvMduaUGHwkYxNirPLyD-vWgCV_rmJiIniww5mPrlu5kzGs3n3jCAaTENFWf1tfLr3cgz_97qAdSugkwhx359VDgXOM2S2Zg");'></div>
-<div class="absolute inset-0 flex items-center justify-center">
-<div class="bg-white dark:bg-slate-900 p-3 rounded-full shadow-lg">
-<span class="material-symbols-outlined text-red-500 text-3xl">location_on</span>
-</div>
-</div>
-</div>
-<p class="text-sm text-slate-600 dark:text-slate-400">Hudson, Berazategui. Zona tranquila y de fácil acceso.</p>
-</section>
-</div>
-<!-- Right Column: Sticky Booking Card -->
-<aside class="w-full lg:w-[380px]">
-<div class="sticky-card bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-800 space-y-6">
-<div>
-<div class="flex items-baseline gap-1">
-<span class="text-3xl font-black text-slate-900 dark:text-white">$180.000</span>
-<span class="text-slate-500 dark:text-slate-400 font-medium">/ mes</span>
-</div>
-<p class="text-xs text-slate-400 mt-1 uppercase tracking-wider font-semibold">Expensas incluidas</p>
-</div>
-<div class="space-y-4">
-<div class="p-4 rounded-lg bg-background-light dark:bg-background-dark border border-slate-100 dark:border-slate-800">
-<div class="flex items-center gap-3">
-<div class="size-10 rounded-full bg-slate-300 overflow-hidden">
-<div class="w-full h-full bg-cover bg-center" data-alt="Property owner portrait" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuANVCV3Af0PgvRSW49k3I4-pZlb_22JmG4eUr3W0OPPMrEMH5C5yQ8H-yh0xm2CvfBEUcjzDAPt0YrljzoAUd4W9VYJLsmKdbCYR-9ZDXnhgTQ8ysChsoxQ-9mJs4ICPLUlxpfmsLXtaBP6Sf7_apkPXp2DsDzgRduMu6wmwCO6LCEaWr9w4wB0t4QD96MzEtGt8w3y_FYYfZ1X5ke_lMZ3aV65DRsnug-D3c21HF31e2Uzsk4rcWkCV4Ai8wMZu0Hz_QNEWfXKkAQ");'></div>
-</div>
-<div>
-<p class="font-bold text-sm">Dueño Directo</p>
-<p class="text-xs text-green-500 font-medium">En línea ahora</p>
-</div>
-</div>
-</div>
-<button class="w-full bg-whatsapp text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:brightness-95 transition-all shadow-lg shadow-whatsapp/20">
-<span class="material-symbols-outlined">chat</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex flex-col lg:flex-row gap-12">
+            <!-- Left Column: Content & Gallery -->
+            <div class="flex-1 space-y-8">
+                <!-- Hero Section -->
+                <section class="relative group overflow-hidden rounded-xl bg-slate-200 dark:bg-slate-800 cursor-pointer"
+                    id="fotos">
+                    <div id="hero-image"
+                        class="aspect-[2/1] w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+                        data-alt="Vista principal del monoambiente"
+                        style='background-image: linear-gradient(rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.5) 100%), url("images/image_1.png");'>
+                        <div class="absolute bottom-6 left-6 text-white pointer-events-none">
+                            <h2 class="text-3xl font-extrabold">Monoambiente Amplio en Hudson</h2>
+                            <p class="text-white/90 font-medium">Ideal para uno o dos personas</p>
+                        </div>
+                        <div
+                            class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                            <div class="bg-white/20 backdrop-blur-md p-3 rounded-full">
+                                <span class="material-symbols-outlined text-white text-3xl">zoom_in</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Photo Carousel -->
+                <div class="overflow-x-auto no-scrollbar">
+                    <div class="flex gap-4 pb-2" id="carousel-container">
+                        <div
+                            class="flex-none w-36 h-24 rounded-lg overflow-hidden bg-slate-200 cursor-pointer border-2 border-primary transition-all hover:opacity-100 carousel-item">
+                            <div class="w-full h-full bg-cover bg-center" data-alt="Vista interior"
+                                style='background-image: url("images/image_1.png");'>
+                            </div>
+                        </div>
+                        <div
+                            class="flex-none w-36 h-24 rounded-lg overflow-hidden bg-slate-200 cursor-pointer border-2 border-transparent hover:border-primary/50 transition-all hover:opacity-100 carousel-item">
+                            <div class="w-full h-full bg-cover bg-center" data-alt="Vista interior"
+                                style='background-image: url("images/image_2.png");'>
+                            </div>
+                        </div>
+                        <div
+                            class="flex-none w-36 h-24 rounded-lg overflow-hidden bg-slate-200 cursor-pointer border-2 border-transparent hover:border-primary/50 transition-all hover:opacity-100 carousel-item">
+                            <div class="w-full h-full bg-cover bg-center" data-alt="Vista interior"
+                                style='background-image: url("images/image_3.jpg");'>
+                            </div>
+                        </div>
+                        <div
+                            class="flex-none w-36 h-24 rounded-lg overflow-hidden bg-slate-200 cursor-pointer border-2 border-transparent hover:border-primary/50 transition-all hover:opacity-100 carousel-item">
+                            <div class="w-full h-full bg-cover bg-center" data-alt="Vista baño/otros"
+                                style='background-image: url("images/image_4.jpg");'>
+                            </div>
+                        </div>
+                        <div
+                            class="flex-none w-36 h-24 rounded-lg overflow-hidden bg-slate-200 cursor-pointer border-2 border-transparent hover:border-primary/50 transition-all hover:opacity-100 carousel-item">
+                            <div class="w-full h-full bg-cover bg-center" data-alt="Vista exterior/otros"
+                                style='background-image: url("images/image_5.jpg");'>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Features Section -->
+                <section class="space-y-6" id="caracteristicas">
+                    <h3
+                        class="text-2xl font-bold text-slate-900 dark:text-white border-b border-slate-200 dark:border-slate-800 pb-4">
+                        Detalles de la Propiedad</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div
+                            class="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-slate-900 shadow-sm border border-slate-100 dark:border-slate-800">
+                            <span class="material-symbols-outlined text-primary text-3xl">straighten</span>
+                            <div>
+                                <p class="text-sm text-slate-500 dark:text-slate-400">Dimensiones</p>
+                                <p class="font-bold">7mts x 4mts (28m²)</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-slate-900 shadow-sm border border-slate-100 dark:border-slate-800">
+                            <span class="material-symbols-outlined text-primary text-3xl">bathroom</span>
+                            <div>
+                                <p class="text-sm text-slate-500 dark:text-slate-400">Baño</p>
+                                <p class="font-bold">Baño Completo</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-slate-900 shadow-sm border border-slate-100 dark:border-slate-800">
+                            <span class="material-symbols-outlined text-primary text-3xl">bolt</span>
+                            <div>
+                                <p class="text-sm text-slate-500 dark:text-slate-400">Servicios</p>
+                                <p class="font-bold">Luz compartida</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-slate-900 shadow-sm border border-slate-100 dark:border-slate-800">
+                            <span class="material-symbols-outlined text-primary text-3xl">water_heater</span>
+                            <div>
+                                <p class="text-sm text-slate-500 dark:text-slate-400">Agua Caliente</p>
+                                <p class="font-bold">Termotanque eléctrico</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-slate-900 shadow-sm border border-slate-100 dark:border-slate-800">
+                            <span class="material-symbols-outlined text-primary text-3xl">local_laundry_service</span>
+                            <div>
+                                <p class="text-sm text-slate-500 dark:text-slate-400">Lavarropas</p>
+                                <p class="font-bold">Conexión lista en el baño</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-slate-900 shadow-sm border border-slate-100 dark:border-slate-800">
+                            <span class="material-symbols-outlined text-primary text-3xl">deck</span>
+                            <div>
+                                <p class="text-sm text-slate-500 dark:text-slate-400">Exteriores</p>
+                                <p class="font-bold">Patio compartido (9m²)</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Location Section -->
+                <section class="space-y-4" id="ubicacion">
+                    <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Ubicación</h3>
+                    <div
+                        class="w-full h-64 rounded-xl bg-slate-200 dark:bg-slate-800 overflow-hidden relative shadow-md">
+                        <iframe class="w-full h-full grayscale-[20%] hover:grayscale-0 transition-all duration-500"
+                            width="100%" height="100%" frameborder="0" style="border:0"
+                            src="https://maps.google.com/maps?q=C.+49+4718,+B1885+Guillermo+Enrique+Hudson,+Provincia+de+Buenos+Aires,+Argentina&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">Hudson, Berazategui. Zona tranquila y de fácil
+                        acceso.</p>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">Cuenta con:
+                        <br>
+                        Luz compartida.
+                        No tiene gas natural.
+                        Agua fría y caliente en cocina.
+                        Calefon eléctrico en el baño.
+                        El baño cuenta con un chicote para instalar lavarropas.
+                        Tiene un pequeño patito de 3mtsx3mts compartido.
+                        Tiene alacena y bajo mesada.
+                        Repisa para tv y otros objetos.
+                    </p>
+
+                    <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div
+                            class="flex items-center gap-3 p-3 bg-white dark:bg-slate-900 rounded-lg border border-slate-100 dark:border-slate-800 shadow-sm">
+                            <div class="p-2 bg-primary/10 rounded-full text-primary">
+                                <span class="material-symbols-outlined text-xl">train</span>
+                            </div>
+                            <div>
+                                <p class="font-bold text-sm text-slate-800 dark:text-slate-200">UPA 10</p>
+                                <p class="text-xs text-slate-500">6 cuadras de la UPA</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-center gap-3 p-3 bg-white dark:bg-slate-900 rounded-lg border border-slate-100 dark:border-slate-800 shadow-sm">
+                            <div class="p-2 bg-primary/10 rounded-full text-primary">
+                                <span class="material-symbols-outlined text-xl">directions_car</span>
+                            </div>
+                            <div>
+                                <p class="font-bold text-sm text-slate-800 dark:text-slate-200">Acceso Autopista</p>
+                                <p class="text-xs text-slate-500">Bs. As. - La Plata (a 5 min)</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-center gap-3 p-3 bg-white dark:bg-slate-900 rounded-lg border border-slate-100 dark:border-slate-800 shadow-sm">
+                            <div class="p-2 bg-primary/10 rounded-full text-primary">
+                                <span class="material-symbols-outlined text-xl">storefront</span>
+                            </div>
+                            <div>
+                                <p class="font-bold text-sm text-slate-800 dark:text-slate-200">Centro Comercial</p>
+                                <p class="text-xs text-slate-500">Comercios y Servicios cercanos</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-center gap-3 p-3 bg-white dark:bg-slate-900 rounded-lg border border-slate-100 dark:border-slate-800 shadow-sm">
+                            <div class="p-2 bg-primary/10 rounded-full text-primary">
+                                <span class="material-symbols-outlined text-xl">park</span>
+                            </div>
+                            <div>
+                                <p class="font-bold text-sm text-slate-800 dark:text-slate-200">Hudson Shopping Plaza
+                                </p>
+                                <p class="text-xs text-slate-500">20 cuadras de distancia</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- Right Column: Sticky Booking Card -->
+            <aside class="w-full lg:w-[550px]">
+                <div
+                    class="sticky-card bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-800 space-y-6">
+                    <div>
+                        <div class="flex items-baseline gap-1">
+                            <span class="text-3xl font-black text-slate-900 dark:text-white">$350.000</span>
+                            <span class="text-slate-500 dark:text-slate-400 font-medium">/ mes</span>
+                        </div>
+                        <p class="text-xs text-slate-400 mt-1 uppercase tracking-wider font-semibold">Expensas incluidas
+                        </p>
+                    </div>
+                    <div class="space-y-4">
+                        <div
+                            class="p-4 rounded-lg bg-background-light dark:bg-background-dark border border-slate-100 dark:border-slate-800">
+                            <div class="flex items-center gap-3">
+                                <div class="size-10 rounded-full bg-slate-300 overflow-hidden">
+                                    <div class="w-full h-full bg-cover bg-center" data-alt="Property owner portrait"
+                                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuANVCV3Af0PgvRSW49k3I4-pZlb_22JmG4eUr3W0OPPMrEMH5C5yQ8H-yh0xm2CvfBEUcjzDAPt0YrljzoAUd4W9VYJLsmKdbCYR-9ZDXnhgTQ8ysChsoxQ-9mJs4ICPLUlxpfmsLXtaBP6Sf7_apkPXp2DsDzgRduMu6wmwCO6LCEaWr9w4wB0t4QD96MzEtGt8w3y_FYYfZ1X5ke_lMZ3aV65DRsnug-D3c21HF31e2Uzsk4rcWkCV4Ai8wMZu0Hz_QNEWfXKkAQ");'>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-sm">Dueño Directo</p>
+                                    <p class="text-xs text-green-500 font-medium">En línea ahora</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/5491131677098?text=Hola,%20%C2%BFc%C3%B3mo%20est%C3%A1s?%20Vi%20la%20publicaci%C3%B3n%20en%20el%20sitio%20y%20quer%C3%ADa%20pedirte%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20propiedad.%20Gracias!"
+                            target="_blank"
+                            class="w-full bg-whatsapp text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:brightness-95 transition-all shadow-lg shadow-whatsapp/20">
+                            <span class="material-symbols-outlined">chat</span>
                             Contactar por WhatsApp
-                        </button>
-<button class="w-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 py-3 rounded-xl font-bold text-sm hover:bg-slate-200 dark:hover:bg-slate-700 transition-all">
+                        </a>
+                        <a href="https://wa.me/5491131677098?text=Hola!%20Te%20consulto%20por%20el%20aviso%20de%20la%20web:%20%C2%BFsigue%20disponible%20el%20inmueble?%20Saludos"
+                            target="_blank"
+                            class="w-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 py-3 rounded-xl font-bold text-sm hover:bg-slate-200 dark:hover:bg-slate-700 transition-all block text-center">
                             Consultar Disponibilidad
-                        </button>
-</div>
-<div class="pt-4 border-t border-slate-100 dark:border-slate-800">
-<ul class="space-y-2 text-xs text-slate-500 dark:text-slate-400">
-<li class="flex items-center gap-2">
-<span class="material-symbols-outlined text-[14px]">verified</span>
-                                Verificado por Hudson Propiedades
-                            </li>
-<li class="flex items-center gap-2">
-<span class="material-symbols-outlined text-[14px]">event_available</span>
+                        </a>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 dark:border-slate-800">
+                        <ul class="space-y-2 text-xs text-slate-500 dark:text-slate-400">
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-[14px]">event_available</span>
                                 Disponible para ingreso inmediato
                             </li>
-</ul>
-</div>
-</div>
-</aside>
-</div>
-</main>
-<footer class="mt-20 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center">
-<div class="flex flex-col items-center gap-4">
-<div class="flex items-center gap-2 text-slate-400">
-<svg class="size-6" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z" fill="currentColor"></path>
-</svg>
-<span class="font-bold">Hudson Alquileres</span>
-</div>
-<p class="text-sm text-slate-500">© 2024 - Todos los derechos reservados. Monoambiente en Hudson, Buenos Aires.</p>
-<div class="flex gap-6 mt-4">
-<a class="text-xs text-slate-400 hover:text-primary transition-colors" href="#">Términos</a>
-<a class="text-xs text-slate-400 hover:text-primary transition-colors" href="#">Privacidad</a>
-<a class="text-xs text-slate-400 hover:text-primary transition-colors" href="#">Contacto</a>
-</div>
-</div>
-</div>
-</footer>
-</body></html>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+    <footer class="mt-20 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center">
+            <div class="flex flex-col items-center gap-4">
+                <div class="flex items-center gap-2 text-slate-400">
+                    <svg class="size-6" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z"
+                            fill="currentColor"></path>
+                    </svg>
+                    <span class="font-bold">Monoambiente - Hudson | Alquiler</span>
+                </div>
+                <p class="text-sm text-slate-500">© 2024 - Todos los derechos reservados. Monoambiente en Hudson, Buenos
+                    Aires.</p>
+                <div class="flex gap-6 mt-4">
+                    <a class="text-xs text-slate-400 hover:text-primary transition-colors" href="#">Términos</a>
+                    <a class="text-xs text-slate-400 hover:text-primary transition-colors" href="#">Privacidad</a>
+                    <a class="text-xs text-slate-400 hover:text-primary transition-colors" href="#">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Photo Lightbox Modal -->
+    <div id="photo-modal"
+        class="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+        <button id="close-modal" class="absolute top-6 right-6 text-white hover:text-slate-300 transition-colors">
+            <span class="material-symbols-outlined text-4xl">close</span>
+        </button>
+        <div class="max-w-[90vw] max-h-[90vh] overflow-hidden rounded-lg">
+            <img id="modal-img" src="" alt="Vista ampliada"
+                class="w-full h-full object-contain shadow-2xl scale-95 transition-transform duration-300">
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const heroImage = document.getElementById('hero-image');
+            const carouselItems = document.querySelectorAll('.carousel-item');
+            const photoModal = document.getElementById('photo-modal');
+            const modalImg = document.getElementById('modal-img');
+            const closeModal = document.getElementById('close-modal');
+
+            // Carousel Logic
+            carouselItems.forEach(item => {
+                item.addEventListener('click', function () {
+                    const bgImage = this.querySelector('div').style.backgroundImage;
+                    const urlMatch = bgImage.match(/url\("?(.+?)"?\)/);
+                    if (urlMatch && urlMatch[1]) {
+                        heroImage.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.5) 100%), url("${urlMatch[1]}")`;
+                    }
+
+                    carouselItems.forEach(i => {
+                        i.classList.remove('border-primary');
+                        i.classList.add('border-transparent');
+                    });
+                    this.classList.remove('border-transparent');
+                    this.classList.add('border-primary');
+                });
+            });
+
+            // Modal Logic
+            heroImage.addEventListener('click', () => {
+                const bgImage = heroImage.style.backgroundImage;
+                const urlMatch = bgImage.match(/url\("?(.+?)"?\)/);
+                if (urlMatch && urlMatch[1]) {
+                    modalImg.src = urlMatch[1];
+                    photoModal.classList.remove('opacity-0', 'pointer-events-none');
+                    setTimeout(() => {
+                        modalImg.classList.remove('scale-95');
+                    }, 50);
+                    document.body.style.overflow = 'hidden'; // Prevent scroll
+                }
+            });
+
+            const hideModal = () => {
+                photoModal.classList.add('opacity-0', 'pointer-events-none');
+                modalImg.classList.add('scale-95');
+                document.body.style.overflow = ''; // Restore scroll
+            };
+
+            closeModal.addEventListener('click', hideModal);
+            photoModal.addEventListener('click', (e) => {
+                if (e.target === photoModal) hideModal();
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && !photoModal.classList.contains('opacity-0')) {
+                    hideModal();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
